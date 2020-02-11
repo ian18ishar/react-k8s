@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  namespace: kubishar-test
+  annotations:
+    flux.weave.works/automated: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: app
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: app
+    spec:
+      containers:
+      - name: app
+        image: ianisharpratama/reactsample:frontend-v1
+        imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: kubis-secret
