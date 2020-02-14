@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app
-  namespace: kubishar-test
+  namespace: reactor-kubis
   annotations:
     flux.weave.works/automated: 'true'
 spec:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ianisharpratama/reactsample:frontend-148347788
+        image: pelabuhan.alterra.dev/project-i2p/reactor
         imagePullPolicy: Always
       imagePullSecrets:
-      - name: kubis-secret
+      - name: pelabuhan-i2p
