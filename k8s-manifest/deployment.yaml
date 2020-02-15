@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: pelabuhan.alterra.dev/project-i2p/reactor
+        image: ianisharpratama/react-i2p:v1
         imagePullPolicy: Always
       imagePullSecrets:
-      - name: pelabuhan-i2p
+      - name: hub-docker-secret
