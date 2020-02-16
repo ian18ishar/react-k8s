@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ianisharpratama/react-i2p:v1
+        image: ianisharpratama/react-i2p:v2
         imagePullPolicy: Always
       imagePullSecrets:
       - name: hub-docker-secret
