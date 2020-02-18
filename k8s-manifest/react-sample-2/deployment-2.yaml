@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: pelabuhan.alterra.dev/i2p-2/react-i2p:149234023
+        image: pelabuhan.alterra.dev/i2p-2/react-i2p:149375945
         #image: ianisharpratama/react-i2p:v1
         imagePullPolicy: Always
       imagePullSecrets:
