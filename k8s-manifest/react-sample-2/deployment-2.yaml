@@ -3,9 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app
-  namespace: reactor-kubis
-  annotations:
-    flux.weave.works/automated: 'true'
+  namespace: reactor-kubis-2
 spec:
   replicas: 1
   selector:
@@ -23,7 +21,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: pelabuhan.alterra.dev/i2p/react-i2p:149375919
+        image: pelabuhan.alterra.dev/i2p-2/react-i2p:149375945
         #image: ianisharpratama/react-i2p:v1
         imagePullPolicy: Always
       imagePullSecrets:
